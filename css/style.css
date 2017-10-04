@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-10-03 22:53:42
+ * @version $Id$
+ */
+/* 去除浏览器默认样式 */
+*{
+	margin: 0;
+	padding: 0;
+}
+/* 设置一些公共样式 */
+img{
+	border: none;
+}
+a{
+	color: #fff;
+	text-decoration: none;
+}
+a:focus, a:hover {
+    color: #095f8a;
+}
+ul li{
+	list-style-type: none;
+}
+/* 头部 */
+.header{
+	width: 100%;
+	height: 167px;
+	background: #0096ff;
+}
+/* 头部logo部分 */
+.header-logo{
+	width: 400px;
+	height: 95px;
+	padding-top: 20px;
+	margin-left: 164px;
+}
+/* 头部检索部分 */
+.both{
+	width: 200px;
+	height: 25px;
+	float: right;
+	position: absolute;
+}
+.search_up{
+	top: 30px;
+	right: 160px;
+}
+.search_up  a {
+    font-size: 14px;
+    font-family: 微软雅黑;
+}
+.search_down{
+	clear: both;
+	top: 55px;
+	right: 160px;
+}
+.search #find {
+    width: 141px;
+    height: 26px;
+    border-radius: 4px;
+}
+#searchsubmit {
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 0;
+    background-image: url(../images/icon-search.png);
+    background-repeat: no-repeat;
+}
+/* 头部导航部分 */
+.nav{
+	clear: both;
+	width: 100%;
+	height: 50px;
+}
+.nav ul{
+	margin: 0 auto;
+	width: 1020px;
+}
+.nav ul li{
+    float: left;
+    padding: 10px 0;
+    width: 12.45%;
+    height: 30px;
+    text-align: center;
+    font-size: 1.2em;
+
+}
+/* 中间 */
+.main{
+	width: 100%;
+	height: 1099px;
+	background: #EFF3F5;
+}
+/* 轮播图部分 */
+.main {
+    clear: both;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* 轮播图部分 */
+.banner {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: #7d7d7d;
+    font-size: 20px;
+    font-weight: bold;
+}
+#container {
+    position: relative;
+    width: 1300px;
+    height: 400px;
+    overflow: hidden;
+    }
+#list {
+    position: absolute;
+    left: -1300px;
+    z-index: 1;
+    width: 9100px;
+    height: 400px;
+    background: gray;
+}
+
+#list img {
+    float: left;
+    width: 1300px;
+    height: 400px;
+}
+
+#buttons {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    z-index: 2;
+    height: 10px;
+    width: 100px;
+}
+
+#buttons span {
+    float: left;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+}
+
+#buttons .on {
+    background: orangered;
+}
+
+.arrow {
+    position: absolute;
+    top: 180px;
+    z-index: 2;
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    background-color: RGBA(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background-color: RGBA(0, 0, 0, .7);
+}
+
+#container:hover .arrow {
+    display: block;
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
+#container .prev {
+    position: absolute;
+    width: 1020px;
+    height: 400px;
+    background: #fff;
+    top: 0px;
+    z-index: 10;
+    opacity: 0.65;
+    filter: alpha(opacity:65)!important;
+}
+/* 底部 */
+.footer{
+	width: 100%;
+	height: 75px;
+	background: #434757;
+}
