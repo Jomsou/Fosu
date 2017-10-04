@@ -116,22 +116,22 @@ ul li{
 }
 #container {
     position: relative;
-    width: 1300px;
+    width: 1020px;
     height: 400px;
     overflow: hidden;
     }
 #list {
     position: absolute;
-    left: -1300px;
+    left: -1020px;
     z-index: 1;
-    width: 9100px;
+    width: 7140px;
     height: 400px;
     background: gray;
 }
 
 #list img {
     float: left;
-    width: 1300px;
+    width: 1020px;
     height: 400px;
 }
 

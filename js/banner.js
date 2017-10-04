@@ -23,11 +23,11 @@
         var newLeft = parseInt(list.style.left) + offset;
         list.style.left = newLeft + 'px';
         //无限滚动判断
-        if (newLeft > -1300) {
-            list.style.left = -6500 + 'px';
+        if (newLeft > -1020) {
+            list.style.left = -5100 + 'px';
         }
-        if (newLeft < -6500) {
-            list.style.left = -1300 + 'px';
+        if (newLeft < -5100) {
+            list.style.left = -1020 + 'px';
         }
     }
     function play() {
@@ -55,7 +55,7 @@
             index = 5
         }
         buttonsShow();
-        animate(1300);
+        animate(1020);
     };
     next.onclick = function () {
         //由于上边定时器的作用，index会一直递增下去，我们只有5个小圆点，所以需要做出判断
@@ -63,7 +63,7 @@
         if (index > 5) {
             index = 1
         }
-        animate(-1300);
+        animate(-1020);
         buttonsShow();
     };
     for (var i = 0; i < buttons.length; i++) {
@@ -72,7 +72,7 @@
                 /*  这里获得鼠标移动到小圆点的位置，用this把index绑定到对象buttons[i]上，去谷歌this的用法  */
                 /*  由于这里的index是自定义属性，需要用到getAttribute()这个DOM2级方法，去获取自定义index的属性*/
                 var clickIndex = parseInt(this.getAttribute('index'));
-                var offset = 1300 * (index - clickIndex); //这个index是当前图片停留时的index
+                var offset = 1020 * (index - clickIndex); //这个index是当前图片停留时的index
                 animate(offset);
                 index = clickIndex; //存放鼠标点击后的位置，用于小圆点的正常显示
                 buttonsShow();
