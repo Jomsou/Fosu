@@ -44,48 +44,127 @@
     </div>
     <!-- 中间 -->
     <div class="main">
-    	 <!--轮播图部分--> 
-        <div class="banner" id="container">
-            <div id="list">
-                <img src="images/banner_05.jpg" alt="5" />
-                <img src="images/banner_01.jpg" alt="1" />
-                <img src="images/banner_02.jpg" alt="2" />
-                <img src="images/banner_03.jpg" alt="3" />
-                <img src="images/banner_04.jpg" alt="4" />
-                <img src="images/banner_05.jpg" alt="5" />
-                <img src="images/banner_01.jpg" alt="5" />
+         <!-- 轮播图部分  -->
+        <div id="container">
+            <div id="list" style="left: -1020px;">
+                <ul>
+                    <li><img src="images/banner_05.jpg" alt="5" /></li>
+                    <li><img src="images/banner_01.jpg" alt="1" /></li>
+                    <li><img src="images/banner_02.jpg" alt="2" /></li>
+                    <li><img src="images/banner_03.jpg" alt="3" /></li>
+                    <li><img src="images/banner_04.jpg" alt="4" /></li>
+                    <li><img src="images/banner_05.jpg"  alt="5" /></li>
+                    <li><img src="images/banner_01.jpg" alt="1" /></li>
+                 </ul>
             </div>
-            <div id="buttons">
-                <span index="1" class="on"></span>
-                <span index="2"></span>
-                <span index="3"></span>
-                <span index="4"></span>
-                <span index="5"></span>
+            <a href="javascript:;" id="last" class="arrow"><img src="images/left.png" alt=""></a>
+            <a href="javascript:;" id="next" class="arrow"><img src="images/right.png" alt=""></a>
+            <div id="prev-left" class="prev"></div>
+            <div id="prev-right" class="prev"></div>
+        </div>
+        <div class="article">
+            <!-- 内容左边链接部分  -->
+            <div class="left-link">
+                <ul>
+                    <li><a href="">佛大易班</a></li>
+                    <li><a href="">邮件系统</a></li>
+                    <li><a href="">协同办公系统</a></li>
+                    <li><a href="">教务管理系统</a></li>
+                    <li><a href="">实验室管理系统</a></li>
+                    <li><a href="">科研管理系统</a></li>
+                    <li><a href="">省质量工程</a></li>                <li><a href="">图书馆</a></li>
+                    <li><a href="">BB教学平台</a></li>
+                </ul>
             </div>
-            <a href="javascript:;" id="prev" class="arrow">&lt;</a>
-            <a href="javascript:;" id="next" class="arrow">&gt;</a>
+            <!-- 内容中间部分  -->
+            <div class="middle content">
+               <div class="tab-head">
+                    <h2 onmouseover="changeTab(0)" class="selected"><img src="images/icon-list-white.png"><span>图片新闻</span></h2>
+                    <h2 onmouseover="changeTab(1)"><img src="images/icon-video-white.png" alt=""><span>媒体聚焦</span></h2>
+                    <h2 onmouseover="changeTab(2)"><img src="images/icon-news-blue.png" alt=""><span>新闻网</span><a href=""></a></h2>
+                </div>
+                <div class="tab-content">
+                    <div class="show">
+                        <ul>
+                            <li><a href=""></a>1</li>
+                            <li><a href=""></a>2</li>
+                            <li><a href=""></a>3</li>
+                            <li><a href=""></a>4</li>
+                        </ul>
+                    </div>
+                    <div>content2</div>
+                    <div>content3</div>
+                </div>
+            </div>
+            <div class="right content">
+                <div class="tab-headc">
+                    <h3 onmouseover="changeTabc(0)" class="selected"><span>学校新闻</span></h2>
+                    <h3 onmouseover="changeTabc(1)"><span>院处动态</span></h2>
+                    <h3 onmouseover="changeTabc(2)"><span>公开消息</span></h2>
+                    <h3 onmouseover="changeTabc(3)"><span>招标采购</span></h2>
+                </div>
+                <div class="tab-contentc">
+                    <div class="show">content1</div>
+                    <div>content2</div>
+                    <div>content3</div>
+                    <div>content4</div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- 底部 -->
     <div class="footer">
     	<!-- 底部左边 -->
     	<div class="footer-left">
-    		<!-- <span>
-    			    		<p>地址：广东省佛山市禅城区江湾一路18号</p>
-    			    		<p>总机：</p>
-    			    		<p>（0757）82272751</p>
-    			    		<p>邮编：</p>
-    			    		<p>528000</p>
-    		</span>
-    		<span>
-    			          <p>版权所有 © 佛山科学技术学院</p> <p>粤ICP备05008830</p>
-    			           <p>粤公网安备 44060402000117号</p> <p>技术反馈：lambda@fosu.edu.cn</p>
-    			        </span>
-    		    	</div> -->
+    		<h6>
+	    		<span>
+		    		<p>地址：广东省佛山市禅城区江湾一路18号</p>
+		    		<p>总机：</p>
+		    		<p>（0757）82272751</p>
+		    		<p>邮编：</p>
+		    		<p>528000</p>
+	    		</span>
+	    		<span>
+    		        <p>版权所有 © 佛山科学技术学院</p> <p>粤ICP备05008830</p>
+    		        <p>粤公网安备 44060402000117号</p> <p>技术反馈：lambda@fosu.edu.cn</p>
+	    		</span>
+    		</h6>
+    	</div>
     	<!-- 底部右边 -->
-    	<div class="footer right">
+    	<div class="footer-right">
     		
     	</div>
     </div>
+    <script>
+    //tab切换的js代码
+        var tabs = document.getElementsByClassName('tab-head')[0].getElementsByTagName('h2'),
+                contents = document.getElementsByClassName('tab-content')[0].getElementsByTagName('div');
+
+        function changeTab(index) {
+                for(var i = 0, len = tabs.length; i < len-1; i++) {
+                    if(i === index) {
+                        tabs[i].className = 'selected';
+                        contents[i].className = 'show';
+                    }else{
+                        tabs[i].className = '';
+                        contents[i].className = '';
+                    }
+                }
+            }
+        var tabsc = document.getElementsByClassName('tab-headc')[0].getElementsByTagName('h3'),
+                contentsc = document.getElementsByClassName('tab-contentc')[0].getElementsByTagName('div');
+
+        function changeTabc(index) {
+                for(var i = 0, len = tabsc.length; i < len; i++) {
+                    if(i === index) {
+                        tabsc[i].className = 'selected';
+                        contentsc[i].className = 'show';
+                    }else{
+                        tabsc[i].className = '';
+                        contentsc[i].className = '';
+                    }
+                }
+            }
+    </script>
 </body>
 </html>

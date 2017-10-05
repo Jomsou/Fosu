@@ -10,6 +10,9 @@
 	margin: 0;
 	padding: 0;
 }
+body{
+    overflow-x: hidden;
+}
 /* 设置一些公共样式 */
 img{
 	border: none;
@@ -54,11 +57,13 @@ ul li{
 }
 .search_down{
 	clear: both;
+    padding: 2px;
 	top: 55px;
 	right: 160px;
 }
 .search #find {
-    width: 141px;
+    padding: 2px
+    width: 120px;
     height: 26px;
     border-radius: 4px;
 }
@@ -93,40 +98,25 @@ ul li{
 /* 中间 */
 .main{
 	width: 100%;
-	height: 1099px;
+	height: 857px;
 	background: #EFF3F5;
-}
-/* 轮播图部分 */
-.main {
-    clear: both;
-    margin: 0 auto;
-    width: 100%;
-    background-color: #fff;
-    font-size: 20px;
-    font-weight: bold;
 }
 /* 轮播图部分 */
 .banner {
     margin: 0 auto;
     width: 100%;
-    text-align: center;
-    color: #7d7d7d;
-    font-size: 20px;
-    font-weight: bold;
 }
 #container {
     position: relative;
-    width: 1020px;
+    padding: 0 164px;
+    width: 100%;
     height: 400px;
     overflow: hidden;
-    }
+}
 #list {
-    position: absolute;
-    left: -1020px;
-    z-index: 1;
+    position: relative;
     width: 7140px;
     height: 400px;
-    background: gray;
 }
 
 #list img {
@@ -134,75 +124,157 @@ ul li{
     width: 1020px;
     height: 400px;
 }
-
-#buttons {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    z-index: 2;
-    height: 10px;
-    width: 100px;
-}
-
-#buttons span {
-    float: left;
-    margin-right: 5px;
-    width: 10px;
-    height: 10px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    background: #333;
-    cursor: pointer;
-}
-
-#buttons .on {
-    background: orangered;
-}
-
 .arrow {
+    width: 45px;
+    height: 45px;
     position: absolute;
     top: 180px;
-    z-index: 2;
-    display: none;
-    width: 40px;
-    height: 40px;
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 39px;
-    text-align: center;
-    color: #fff;
-    background-color: RGBA(0, 0, 0, .3);
     cursor: pointer;
 }
-
-.arrow:hover {
-    background-color: RGBA(0, 0, 0, .7);
-}
-
-#container:hover .arrow {
-    display: block;
-}
-
-#prev {
-    left: 20px;
+#last {
+    position: absolute;
+    left: 164px;
 }
 
 #next {
-    right: 20px;
-}
-#container .prev {
     position: absolute;
-    width: 1020px;
+    left: 1138px;
+}
+#list .prev {
+    float: left;
+    width: 164px;
     height: 400px;
+    background-color: RGBA(0, 0, 0, .7);
+    z-index: 100;
+}
+.left-link{
+    position: relative;
+}
+
+.left-link ul{
+    position: absolute;
+    border-top: 3px solid #0096ff;
+    left: 164px;
+    top: 25px;
+    float: left;
+}
+.left-link ul:hover{
+    border: #0096ff solid 0.5px;
+}
+.left-link ul li{
+    width: 146px;
+    height: 31px;
+    padding: 7px;
+    border-right: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    border-left: 1px solid #d5d5d5;
+    font-size: 14px;
+    line-height: 31px;
+    padding-left: 15px;
     background: #fff;
-    top: 0px;
-    z-index: 10;
-    opacity: 0.65;
-    filter: alpha(opacity:65)!important;
+}
+.left-link ul li a{
+    color: #000;
+}
+.left-link ul li:hover{
+    background: #0096ff;
+    border-left: 6px solid #000;
+}
+.article{
+    position: relative;
+}
+.content {
+    width: 425px;
+    height: 423px;
+    background: #fff;
+    border: 1px solid #d5d5d5;
+    border-top: 3px solid #0096ff; 
+}
+.middle{
+    float: left;
+    position: absolute;
+    left: 345px;
+    top: 25px; 
+}
+h2 {
+    width: 33.3%;
+    height: 42px;
+    margin: 0;
+    float: left;
+    text-align: center;
+    background: #EFF3F5; 
+    line-height: 42px;
+}
+.tab-head img{
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+span{
+    height: 42px;
+    font-size: 16px;
+    padding-left: 10px;
+    font-weight: normal;
+}
+.tab-content{
+    margin-top: 42px;
+    width: 425px;
+    height: 384px;
+}
+
+.tab-content div,.tab-contentc div{
+    display: none;
+}
+
+.selected {
+    background-color: #0096ff;
+    color: #fff;
+}
+
+.tab-content .show,.tab-contentc .show{
+    display: block;
+}
+.tab-content .show li{
+    clear: both;
+    margin: 10px 0 0 10px;
+    width: 387.5px;
+    height: 80px;
+}
+.right{
+    float: right;
+    position: absolute;
+    right: 140px;
+    top: 25px; 
+}
+h3 {
+    width: 25%;
+    height: 42px;
+    margin: 0;
+    float: left;
+    text-align: center;
+    background: #EFF3F5; 
+    line-height: 42px;
 }
 /* 底部 */
 .footer{
+    clear: both;
 	width: 100%;
 	height: 75px;
 	background: #434757;
+}
+h6{
+    width: 700px;
+    padding-top: 18px;
+    margin-left: 164px;
+    font-weight: normal;
+}
+.footer-left span p {
+    float: left;
+    padding-left: 0;
+    padding: 0px 3px;
+    margin-bottom: 0em;
+    font-size: 9pt;
+    color: #bfc7d9;
+    text-align: left;
 }
