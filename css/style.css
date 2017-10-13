@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
- * 
- * @authors Your Name (you@example.org)
+ *
+ * @jomsou
  * @date    2017-10-03 22:53:42
  * @version $Id$
  */
@@ -14,7 +14,6 @@ body {
     overflow-x: hidden;
 }
 /* 设置一些公共样式 */
-
 img {
 	border: none;
 }
@@ -49,7 +48,7 @@ ul li {
 	float: right;
 	position: absolute;
 }
-/*  */
+/* 搜索的第一栏 */
 .search_up {
 	top: 30px;
 	right: 160px;
@@ -58,24 +57,26 @@ ul li {
     font-size: 14px;
     font-family: 微软雅黑;
 }
+/* 搜索的第二栏 */
 .search_down {
 	clear: both;
     padding: 2px;
 	top: 55px;
 	right: 160px;
 }
+/* 搜索框 */
 .search #find {
     padding: 2px
     width: 120px;
     height: 26px;
     border-radius: 4px;
 }
+/* 搜索提交按钮 */
 #searchsubmit {
     padding: 0;
     width: 22px;
     height: 22px;
     border: none;
-    border-radius: 0;
     background-image: url(../images/icon-search.png);
     background-repeat: no-repeat;
 }
@@ -84,10 +85,13 @@ ul li {
 	clear: both;
 	width: 100%;
 	height: 50px;
+    position: relative;
+    z-index: 999;
 }
 .nav ul {
 	margin: 0 auto;
-	width: 1020px;
+    width: 1020px;
+    height: 50px;
 }
 .nav ul li {
     float: left;
@@ -97,41 +101,49 @@ ul li {
     text-align: center;
     font-size: 1.2em;
     color: #fff;
+    background-color: transparent;
 
 }
 .nav ul li:hover {
-    background: #105689;
+    background: #095f8a;
+    opacity: 0.9;
 }
 /* 二级菜单 */
-.nav ul li:hover .sub-nav {
-   display: block;
-}
-.sub-nav {
+.nav ul li .sub-nav {
+    margin-top: 10px;
+    width: 126px;
+    height: 214px;
     display: none;
 }
 .nav ul li .sub-nav li {
     float: left;
-    font-size: 0.8em;
-    padding: 10px 0;
+    width: 126px;
+    height: 32px;
+    padding: 0;
     text-align: center;
-    width: 12.45%;
-    height: 30px;
-    line-height: 30px;
+}
+.nav ul li:hover .sub-nav{
+    display: block;
+    background: #095f8a;
+    opacity: 0.9;
 }
 .nav ul li .sub-nav li a {
-    float: left;
-    font-size: 0.8em;
-    padding: 10px 0;
-    text-align: center;
-    width: 12.45%;
+    font-size: 0.65em;
+    color: #fff;
+    width: 126px;
+    height: 12px;
 }
+.nav ul li .sub-nav li a:hover {
+   text-decoration: underline;
+}
+/* 轮播图部分左右蒙版 */
 .prev {
     position: absolute;
     width: 1020px;
     height: 400px;
     background: #fff;
     top: 0px;
-    z-index: 100;
+    z-index: 10;
     opacity: 0.65;
     filter: alpha(opacity:65)!important;
 }
@@ -148,19 +160,19 @@ ul li {
     width: 100%;
     height: 400px;
     overflow: hidden;
-    z-index: 2;
+    z-index: 1;
 }
 #list {
     position: relative;
     width: 7140px;
     height: 400px;
 }
-
 #list img {
     float: left;
     width: 1020px;
     height: 400px;
 }
+/* 左右<、>样式 */
 .arrow {
     width: 45px;
     height: 45px;
@@ -171,12 +183,14 @@ ul li {
 #last {
     position: absolute;
     left: 164px;
+    z-index: 2;
 }
-
 #next {
     position: absolute;
     left: 1138px;
+    z-index: 2;
 }
+/* 轮播图部分左右蒙版 */
 #list .prev {
     float: left;
     width: 164px;
@@ -184,13 +198,18 @@ ul li {
     background-color: RGBA(0, 0, 0, .7);
     z-index: 100;
 }
+/* 鼠标滑过内容部分边框产生的效果 */
 .left-link ul:hover,.content:hover {
-    box-shadow: 0 0 8px rgba(0, 150, 255, 0.7);;
+    box-shadow: 0 0 8px rgba(0, 150, 255, 0.7);
 }
+/* 文字内容部分 */
+.article {
+    position: relative;
+}
+/* 内容左边链接部分 */
 .left-link {
     position: relative;
 }
-
 .left-link ul {
     position: absolute;
     border-top: 3px solid #0096ff;
@@ -219,21 +238,20 @@ ul li {
     padding-left: 9px;
     border-left: 5px rgb(0,59,101) solid;
 }
-.article {
-    position: relative;
-}
+/* 文字内容部分中间和右边公共样式 */
 .content {
     width: 425px;
     height: 413px;
     background: #fff;
     border: 1px solid #d5d5d5;
-    border-top: 3px solid #0096ff; 
+    border-top: 3px solid #0096ff;
 }
+/* 文字内容部分中间 */
 .middle {
     float: left;
     position: absolute;
     left: 345px;
-    top: 25px; 
+    top: 25px;
 }
 h2 {
     width: 33.3%;
@@ -241,9 +259,10 @@ h2 {
     margin: 0;
     float: left;
     text-align: center;
-    background: #EFF3F5; 
+    background: #EFF3F5;
     line-height: 42px;
 }
+/* tab切换部分头部 */
 .tab-head img {
     width: 24px;
     height: 24px;
@@ -261,18 +280,15 @@ span {
     width: 425px;
     height: 384px;
 }
-
 .tab-content div,.tab-contentc div {
     display: none;
 }
-
 .selected {
     background-color: #0096ff;
     color: #fff;
     cursor: pointer;
 }
-
-.tab-content .show,.tab-contentc .show { 
+.tab-content .show,.tab-contentc .show {
     display: block;
 }
 .tab-content ul {
@@ -300,11 +316,12 @@ span {
 .tab-content li a:hover {
     color: #30789C;
 }
+/* 文字内容部分右边 */
 .right {
     float: right;
     position: absolute;
     right: 140px;
-    top: 25px; 
+    top: 25px;
 }
 .tab-contentc ul {
      margin-top: 52px;
@@ -317,7 +334,7 @@ span {
     border-left: 4px solid #0093ff;
 }
 .tab-contentc li a {
-    color: #0096ff;    
+    color: #0096ff;
     font-size: 14px;
     font-family: 微软雅黑;
 }
@@ -337,7 +354,7 @@ h3 {
     margin: 0;
     float: left;
     text-align: center;
-    background: #EFF3F5; 
+    background: #EFF3F5;
     line-height: 42px;
 }
 /* 底部 */
@@ -349,27 +366,29 @@ h3 {
     position: relative;
 }
 .footer-both {
-    width: 1100px;
-    height: 75px;
+    width: 1150px;
+    height: 65px;
     margin: 0 auto;
 }
 .footer-left, .footer-right,.footer-right-pic {
     position: relative;
     display: inline-block;
 }
+/* 底部左边 */
 .footer-left {
-    width: 665px;
-    height: 75px;
+    width: 660px;
+    height: 65px;
     margin-left: 35px;
 }
+/* 底部右边 */
 .footer-right {
     width: 175px;
-    height: 75px;
-    bottom: 18px;
+    height: 65px;
 }
 h6 {
     position: absolute;
     top: 18px;
+    height: 42px;
     font-weight: normal;
 }
 h6 a {
@@ -379,19 +398,19 @@ h6 a {
 h6 a:hover {
     color: #bfc7d9;
 }
-p {
+.word {
     float: left;
     padding-left: 0;
     padding: 0px 3px;
-    margin-bottom: 0em;
     font-size: 9pt;
     color: #bfc7d9;
 }
+/* 底部右侧图片 */
 .footer-right-pic {
     width: 190px;
     height: 50px;
     line-height: 50px;
-    bottom: 18px;
+    bottom: 10px;
 }
 .footer-right-pic img {
     height: 40px;
@@ -403,5 +422,5 @@ p {
     height: 48px;
     bottom: 80px;
     right: 10px;
-    z-index: 1;
+    z-index: 0;
 }
